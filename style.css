@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    height: 100vh;
+    color: white;
+    padding-top: 15vw;
+    padding-left: 15vw;
+    position: relative;
+}
+
+.bg {
+    background: #444 url(gori.jpg);
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    filter: saturate(50%) brightness(50%);
+}
+
+.title {
+    display: inline-block;
+    font-size: 4vw;
+    text-transform: uppercase;
+    letter-spacing: 1vw;
+    padding-bottom: 1.5vw;
+    border-bottom: 0.4vw solid #fff;
+    text-shadow: var(--shadow);
+}
+
+.title::after {
+    content: '';
+    padding-right: 4vw;
+    text-shadow: var(--shadow);
+}
